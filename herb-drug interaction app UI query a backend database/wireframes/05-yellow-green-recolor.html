@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe 5 — Yellow-to-Green Recolor</title>
+  <link rel="stylesheet" href="wireframes.css" />
+  <style>
+    /* Recolored: only two hues exist anywhere in this palette — yellow (elevated) and green (low). */
+    .yg-light-1 { background: #ffcc00; }
+    .yg-light-2 { background: #b7d838; }
+    .yg-light-3 { background: #34c759; }
+    .yg-light-4 { background: #8e8e93; }
+    .yg-light-1.lit { box-shadow: 0 0 12px 4px rgba(255, 204, 0, 0.7); }
+    .yg-light-2.lit { box-shadow: 0 0 12px 4px rgba(183, 216, 56, 0.7); }
+    .yg-light-3.lit { box-shadow: 0 0 12px 4px rgba(52, 199, 89, 0.7); }
+    .yg-light-4.lit { box-shadow: 0 0 12px 4px rgba(142, 142, 147, 0.7); }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="index.html">&larr; Back to all wireframes</a>
+    <span class="wireframe-label">Wireframe 5</span>
+    <h1 class="app-title">Original UI — Yellow-to-Green Recolor</h1>
+    <p class="subtitle">Same layout as the real app, restyled so red is removed entirely from the palette — now built on the exact same iOS chrome as the real app, not a desktop approximation of it.</p>
+
+    <div class="ios-frame">
+      <div class="ios-navbar">
+        <span class="ios-navbar-title">Curcumin-Drug Interaction Checker</span>
+      </div>
+
+      <div class="ios-content">
+        <div class="ios-disclaimer">
+          Prototype decision-support aid — not clinical advice. Every risk rating is transcribed from a
+          user-provided reference figure covering 104 antineoplastic agents' interaction with curcumin. Nothing
+          here has been independently verified — not a substitute for clinical or pharmacist judgment.
+        </div>
+
+        <div class="ios-card">
+          <h2 class="ios-headline">Quick Check</h2>
+          <input class="ios-textfield" type="text" value="Sunitinib" readonly />
+
+          <div class="ios-result-row">
+            <div class="ios-traffic-light-col">
+              <div class="ios-traffic-light">
+                <span class="ios-light yg-light-1"></span>
+                <span class="ios-light yg-light-2"></span>
+                <span class="ios-light yg-light-3 lit"></span>
+                <span class="ios-light yg-light-4"></span>
+              </div>
+              <p class="ios-risk-label">Low risk — generally safe</p>
+            </div>
+
+            <div class="ios-metrics-col">
+              <div class="ios-degree-block">
+                <div class="ios-degree-bars">
+                  <span class="ios-bar" style="height:22px; background:#ffcc00; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:31px; background:#d6db3a; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:41px; background:#aeda4f; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:50px; background:#6cc957; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:60px; background:#34c759; opacity:1;"></span>
+                </div>
+                <p class="ios-value">5/5</p>
+                <p class="ios-caption">Degrees of Interaction</p>
+              </div>
+
+              <div class="ios-gauge-block">
+                <svg viewBox="0 0 200 110" class="ios-gauge">
+                  <defs>
+                    <linearGradient id="iosGaugeGradient5" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#ffcc00" />
+                      <stop offset="100%" stop-color="#34c759" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M10,100 A90,90 0 0 1 190,100" fill="none" stroke="url(#iosGaugeGradient5)" stroke-width="16" stroke-linecap="round" />
+                  <line x1="100" y1="100" x2="74.34" y2="34.87" stroke="#000" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="100" cy="100" r="5" fill="#000" />
+                </svg>
+                <p class="ios-gauge-value">38% confidence</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ios-result-text">Classified as Low Risk per the reference figure. Highest predicted PK effect.</p>
+        </div>
+      </div>
+
+      <div class="ios-tabbar">
+        <div class="ios-tab ios-tab-active">
+          <span class="ios-tab-icon">&check;</span>
+          <span>Quick Check</span>
+        </div>
+        <div class="ios-tab">
+          <span class="ios-tab-icon">&#9776;</span>
+          <span>Browse All</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#fafbff; margin-top:16px;">
+      <h2 style="margin-bottom:6px;">Design note — flagging a real tradeoff</h2>
+      <p style="font-size: 0.82rem; color: #555; margin: 0;">
+        All four traffic-light slots are still shown (matching the real widget's structure exactly), but none of
+        them are red — the highest-risk slot uses yellow instead. So a "strongly contraindicated" result would
+        only differ from a low-risk one by shade of yellow-to-green, not by a distinct alarm color. For a tool
+        whose whole purpose is flagging risk, that's a legibility/safety tradeoff worth weighing carefully before
+        adopting this direction for real use, even though it's a reasonable thing to explore as a wireframe.
+      </p>
+    </div>
+  </div>
+  <script src="embed.js"></script>
+</body>
+</html>

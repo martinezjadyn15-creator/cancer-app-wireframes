@@ -1,0 +1,105 @@
+Herb,Anti-Cancer Drug,Interaction Degree (%)
+Curcumin,5-Fluorouracil,2
+Curcumin,Abemaciclib,72
+Curcumin,Abiraterone,16
+Curcumin,Acalabrutinib,12
+Curcumin,ADC - DM1 / DM4 payload,93
+Curcumin,ADC - Dxd / MMAE payload,10
+Curcumin,ADC - SN-38 payload,52
+Curcumin,Afatinib,47
+Curcumin,Alectinib,12
+Curcumin,Anastrozole,52
+Curcumin,Anti-CTLA4,99
+Curcumin,Anti-PD1,10
+Curcumin,Anti-PDL1,2
+Curcumin,Apalutamide,59
+Curcumin,Axitinib,47
+Curcumin,Belinostat,63
+Curcumin,Bevacizumab,4
+Curcumin,Binimetinib,82
+Curcumin,BiTEs,7
+Curcumin,Bleomycin,79
+Curcumin,Bosutinib,54
+Curcumin,Brigatinib,59
+Curcumin,Busulfan,64
+Curcumin,Cabozantinib,83
+Curcumin,Capecitabine,88
+Curcumin,Carboplatin,12
+Curcumin,Ceritinib,76
+Curcumin,Cetuximab,53
+Curcumin,Cisplatin,63
+Curcumin,Cobimetinib,92
+Curcumin,Crizotinib,19
+Curcumin,Cyclophosphamide (IV),82
+Curcumin,Cyclophosphamide (Oral),10
+Curcumin,Cytarabine,1
+Curcumin,Dacarbazine,50
+Curcumin,Darolutamide,28
+Curcumin,Dasatinib,45
+Curcumin,Docetaxel,88
+Curcumin,Doxorubicin,48
+Curcumin,Encorafenib,74
+Curcumin,Entrectinib,94
+Curcumin,Enzalutamide,92
+Curcumin,Erlotinib,68
+Curcumin,Etoposide (IV),1
+Curcumin,Etoposide (Oral),27
+Curcumin,Everolimus,63
+Curcumin,Exemestane,81
+Curcumin,Gefitinib,20
+Curcumin,Gemcitabine,87
+Curcumin,Hydroxyurea,81
+Curcumin,Ibrutinib,43
+Curcumin,Ifosfamide,72
+Curcumin,Imatinib,55
+Curcumin,Irinotecan,42
+Curcumin,Ivosidenib,45
+Curcumin,Lapatinib,5
+Curcumin,Larotrectinib,65
+Curcumin,Lenvatinib,20
+Curcumin,Letrozole,97
+Curcumin,Lorlatinib,75
+Curcumin,Melphalan,73
+Curcumin,Methotrexate,2
+Curcumin,Neratinib,64
+Curcumin,Nilotinib,44
+Curcumin,Niraparib,70
+Curcumin,Olaparib,3
+Curcumin,Osimertinib,61
+Curcumin,Oxaliplatin,66
+Curcumin,Paclitaxel,55
+Curcumin,Palbociclib,4
+Curcumin,Panitumumab,10
+Curcumin,Pazopanib,2
+Curcumin,Pemetrexed,70
+Curcumin,Pertuzumab,11
+Curcumin,Pexidartinib,100
+Curcumin,Ponatinib,73
+Curcumin,Procarbazine,57
+Curcumin,Ramucirumab,72
+Curcumin,Regorafenib,21
+Curcumin,Ribociclib,52
+Curcumin,Rituximab,90
+Curcumin,Rucaparib,80
+Curcumin,Selpercatinib,78
+Curcumin,Sonidegib,73
+Curcumin,Sorafenib,2
+Curcumin,Sunitinib,38
+Curcumin,Talazoparib,52
+Curcumin,Tamoxifen,1
+Curcumin,TAS-102,63
+Curcumin,Temozolomide,34
+Curcumin,Tivozanib,33
+Curcumin,Topotecan (IV),30
+Curcumin,Topotecan (Oral),74
+Curcumin,Trametinib,88
+Curcumin,Trastuzumab,59
+Curcumin,Tucatinib,92
+Curcumin,Vandetanib,5
+Curcumin,Vemurafenib,91
+Curcumin,Venetoclax,58
+Curcumin,Vinblastine,44
+Curcumin,Vincristine,9
+Curcumin,Vinorelbine (IV),35
+Curcumin,Vinorelbine (Oral),56
+Curcumin,Vismodegib,19

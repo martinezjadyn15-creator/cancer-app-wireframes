@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iPhone Mockups — 5 Wireframe Renditions</title>
+  <link rel="stylesheet" href="wireframes.css" />
+  <style>
+    .page {
+      max-width: none;
+      padding: 24px 32px 60px;
+    }
+    .phones-row {
+      display: flex;
+      gap: 32px;
+      overflow-x: auto;
+      padding: 20px 4px 30px;
+    }
+    .phone-col {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+    .phone-frame {
+      width: 403px;
+      height: 884px;
+      background: #111;
+      border-radius: 52px;
+      padding: 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+      position: relative;
+      flex: 0 0 auto;
+    }
+    .phone-screen {
+      width: 375px;
+      height: 856px;
+      background: #f7f8fa;
+      border-radius: 38px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .phone-statusbar {
+      flex: 0 0 44px;
+      position: relative;
+      background: #f7f8fa;
+    }
+    .phone-screen iframe {
+      width: 375px;
+      height: 812px;
+      flex: 0 0 812px;
+      border: none;
+      display: block;
+    }
+    .dynamic-island {
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 28px;
+      background: #111;
+      border-radius: 16px;
+      z-index: 5;
+    }
+    .side-button {
+      position: absolute;
+      background: #111;
+      border-radius: 3px;
+    }
+    .button-mute { left: -3px; top: 110px; width: 3px; height: 28px; }
+    .button-vol-up { left: -3px; top: 160px; width: 3px; height: 50px; }
+    .button-vol-down { left: -3px; top: 218px; width: 3px; height: 50px; }
+    .button-power { right: -3px; top: 170px; width: 3px; height: 70px; }
+    .phone-caption {
+      text-align: center;
+    }
+    .phone-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #3b4de0;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 8px;
+    }
+    .phone-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 0 0 4px;
+    }
+    .phone-desc {
+      font-size: 0.8rem;
+      color: #666;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="index.html">&larr; Back to all wireframes</a>
+    <h1 class="app-title">iPhone Mockups</h1>
+    <p class="subtitle">All 5 wireframe renditions shown as mobile screens, side by side for comparison. Each frame embeds the actual wireframe page live — scroll a phone's screen to see the rest of that page.</p>
+
+    <div class="phones-row">
+      <div class="phone-col">
+        <div class="phone-frame">
+          <span class="side-button button-mute"></span>
+          <span class="side-button button-vol-up"></span>
+          <span class="side-button button-vol-down"></span>
+          <span class="side-button button-power"></span>
+          <div class="phone-screen">
+            <div class="phone-statusbar">
+              <span class="dynamic-island"></span>
+            </div>
+            <iframe src="01-combined-bar.html?embed=1" title="Wireframe 1 on iPhone"></iframe>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <p class="phone-title"><span class="phone-num">1</span>Combined Bar</p>
+          <p class="phone-desc">Single fused gradient bar (red to green) combining degree and confidence.</p>
+        </div>
+      </div>
+
+      <div class="phone-col">
+        <div class="phone-frame">
+          <span class="side-button button-mute"></span>
+          <span class="side-button button-vol-up"></span>
+          <span class="side-button button-vol-down"></span>
+          <span class="side-button button-power"></span>
+          <div class="phone-screen">
+            <div class="phone-statusbar">
+              <span class="dynamic-island"></span>
+            </div>
+            <iframe src="02-separate-bars.html?embed=1" title="Wireframe 2 on iPhone"></iframe>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <p class="phone-title"><span class="phone-num">2</span>Separate Bars</p>
+          <p class="phone-desc">Stoplight alongside two distinct, equally-weighted bars.</p>
+        </div>
+      </div>
+
+      <div class="phone-col">
+        <div class="phone-frame">
+          <span class="side-button button-mute"></span>
+          <span class="side-button button-vol-up"></span>
+          <span class="side-button button-vol-down"></span>
+          <span class="side-button button-power"></span>
+          <div class="phone-screen">
+            <div class="phone-statusbar">
+              <span class="dynamic-island"></span>
+            </div>
+            <iframe src="03-pairing-detail.html?embed=1" title="Wireframe 3 on iPhone"></iframe>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <p class="phone-title"><span class="phone-num">3</span>Pairing Detail</p>
+          <p class="phone-desc">Full detail page: summary, comparative studies, effectiveness summary.</p>
+        </div>
+      </div>
+
+      <div class="phone-col">
+        <div class="phone-frame">
+          <span class="side-button button-mute"></span>
+          <span class="side-button button-vol-up"></span>
+          <span class="side-button button-vol-down"></span>
+          <span class="side-button button-power"></span>
+          <div class="phone-screen">
+            <div class="phone-statusbar">
+              <span class="dynamic-island"></span>
+            </div>
+            <iframe src="04-history-table.html?embed=1" title="Wireframe 4 on iPhone"></iframe>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <p class="phone-title"><span class="phone-num">4</span>History Table</p>
+          <p class="phone-desc">Current check plus a native list of past pairings.</p>
+        </div>
+      </div>
+
+      <div class="phone-col">
+        <div class="phone-frame">
+          <span class="side-button button-mute"></span>
+          <span class="side-button button-vol-up"></span>
+          <span class="side-button button-vol-down"></span>
+          <span class="side-button button-power"></span>
+          <div class="phone-screen">
+            <div class="phone-statusbar">
+              <span class="dynamic-island"></span>
+            </div>
+            <iframe src="05-yellow-green-recolor.html?embed=1" title="Wireframe 5 on iPhone"></iframe>
+          </div>
+        </div>
+        <div class="phone-caption">
+          <p class="phone-title"><span class="phone-num">5</span>Yellow-Green Recolor</p>
+          <p class="phone-desc">Original layout, restyled with no red anywhere in the palette.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#fafbff; max-width:720px;">
+      <h2 style="margin-bottom:6px;">How this works</h2>
+      <p style="font-size: 0.82rem; color: #555; margin: 0;">
+        Each phone embeds the actual wireframe file via an iframe at a fixed 375&times;812px viewport (iPhone 13/14
+        standard size), rather than a separate copy — so these mockups always reflect the current, real wireframe
+        content. Scroll inside any individual screen to see the rest of that page; the layouts already reflow to a
+        single column at this width since the underlying CSS uses flex-wrap.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker compose *)",
+      "Bash(nc -z localhost 5432)",
+      "Bash(npm run *)",
+      "Bash(curl -s \"http://localhost:3000/api/herbs\")",
+      "Bash(curl -s \"http://localhost:3000/api/interaction?drug=Paclitaxel&herb=Turmeric\")",
+      "Bash(curl -s \"http://localhost:3000/api/interaction?drug=Imatinib&herb=Turmeric\")"
+    ]
+  }
+}

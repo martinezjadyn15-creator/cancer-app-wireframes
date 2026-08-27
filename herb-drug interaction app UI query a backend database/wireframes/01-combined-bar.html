@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe 1 — Combined Bar</title>
+  <link rel="stylesheet" href="wireframes.css" />
+  <style>
+    .combined-bar-wrap {
+      width: 100%;
+    }
+    .combined-bar-track {
+      position: relative;
+      height: 18px;
+      border-radius: 9px;
+      background: linear-gradient(90deg, #ff3b30 0%, #ff9500 25%, #ffcc00 50%, #8bd646 75%, #34c759 100%);
+    }
+    .combined-bar-marker {
+      position: absolute;
+      top: -5px;
+      width: 4px;
+      height: 28px;
+      background: #000;
+      border-radius: 2px;
+      transform: translateX(-2px);
+    }
+    .combined-bar-marker::after {
+      content: attr(data-value);
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #000;
+      white-space: nowrap;
+    }
+    .combined-bar-scale {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.64rem;
+      color: #8e8e93;
+      margin-top: 6px;
+    }
+    .raw-values {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+      justify-content: center;
+    }
+    .raw-value {
+      text-align: center;
+    }
+    .raw-value .num {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+    .raw-value .label {
+      font-size: 0.66rem;
+      color: #8e8e93;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="index.html">&larr; Back to all wireframes</a>
+    <span class="wireframe-label">Wireframe 1</span>
+    <h1 class="app-title">Combined Confidence + Interaction Bar</h1>
+    <p class="subtitle">Curcumin &times; Sunitinib — one fused gradient bar instead of separate visuals, formatted to match the real iOS app exactly.</p>
+
+    <div class="ios-frame">
+      <div class="ios-navbar">
+        <span class="ios-navbar-title">Curcumin-Drug Interaction Checker</span>
+      </div>
+
+      <div class="ios-content">
+        <div class="ios-disclaimer">
+          Prototype decision-support aid — not clinical advice. Every risk rating is transcribed from a
+          user-provided reference figure covering 104 antineoplastic agents' interaction with curcumin. Nothing
+          here has been independently verified — not a substitute for clinical or pharmacist judgment.
+        </div>
+
+        <div class="ios-card">
+          <h2 class="ios-headline">Quick Check</h2>
+          <input class="ios-textfield" type="text" value="Sunitinib" readonly />
+
+          <div class="ios-result-row">
+            <div class="ios-traffic-light-col">
+              <div class="ios-traffic-light">
+                <span class="ios-light ios-light-red"></span>
+                <span class="ios-light ios-light-orange"></span>
+                <span class="ios-light ios-light-green lit"></span>
+                <span class="ios-light ios-light-gray"></span>
+              </div>
+              <p class="ios-risk-label">Low risk — generally safe</p>
+            </div>
+
+            <div class="ios-metrics-col">
+              <div class="combined-bar-wrap">
+                <div class="combined-bar-track">
+                  <div class="combined-bar-marker" style="left: 69%;" data-value="69"></div>
+                </div>
+                <div class="combined-bar-scale">
+                  <span>Low</span>
+                  <span>High</span>
+                </div>
+              </div>
+
+              <div class="raw-values">
+                <div class="raw-value">
+                  <div class="num">5/5</div>
+                  <div class="label">Degree</div>
+                </div>
+                <div class="raw-value">
+                  <div class="num">38%</div>
+                  <div class="label">Confidence</div>
+                </div>
+                <div class="raw-value">
+                  <div class="num">69%</div>
+                  <div class="label">Combined</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="ios-result-text">Classified as Low Risk per the reference figure. Highest predicted PK effect.</p>
+        </div>
+      </div>
+
+      <div class="ios-tabbar">
+        <div class="ios-tab ios-tab-active">
+          <span class="ios-tab-icon">&check;</span>
+          <span>Quick Check</span>
+        </div>
+        <div class="ios-tab">
+          <span class="ios-tab-icon">&#9776;</span>
+          <span>Browse All</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#fafbff; margin-top:16px;">
+      <h2 style="margin-bottom:6px;">Design note</h2>
+      <p style="font-size: 0.82rem; color: #555; margin: 0;">
+        The stoplight carries the actual risk classification (green/Low Risk) on its own, so the combined bar
+        below it only has to represent degree-of-interaction + confidence — it doesn't need to imply anything
+        about risk itself. That said, the marker position (69%) is still an average of two independent numbers
+        (5/5 and 38%) — a viewer can't tell from the bar alone that this pairing actually has the
+        <em>maximum</em> predicted interaction degree paired with comparatively low confidence. The raw numbers
+        below the bar exist to compensate for that ambiguity.
+      </p>
+    </div>
+  </div>
+  <script src="embed.js"></script>
+</body>
+</html>

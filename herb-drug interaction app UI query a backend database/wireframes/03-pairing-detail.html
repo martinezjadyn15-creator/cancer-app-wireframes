@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe 3 — Pairing Detail Page</title>
+  <link rel="stylesheet" href="wireframes.css" />
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="index.html">&larr; Back to all wireframes</a>
+    <span class="wireframe-label">Wireframe 3</span>
+    <h1 class="app-title">Pairing Detail Page</h1>
+    <p class="subtitle">Curcumin &times; Sunitinib — a dedicated page instead of an inline quick-check result, formatted to match the real iOS app exactly (a screen pushed from Quick Check, so it gets a back button instead of the tab bar).</p>
+
+    <div class="ios-frame">
+      <div class="ios-navbar">
+        <span class="ios-navbar-back">&lsaquo; Quick Check</span>
+        <span class="ios-navbar-title">Sunitinib</span>
+      </div>
+
+      <div class="ios-content">
+        <div class="ios-card">
+          <h2 class="ios-headline">Curcumin &times; Sunitinib</h2>
+
+          <div class="ios-result-row">
+            <div class="ios-traffic-light-col">
+              <div class="ios-traffic-light">
+                <span class="ios-light ios-light-red"></span>
+                <span class="ios-light ios-light-orange"></span>
+                <span class="ios-light ios-light-green lit"></span>
+                <span class="ios-light ios-light-gray"></span>
+              </div>
+              <p class="ios-risk-label">Low risk — generally safe</p>
+            </div>
+
+            <div class="ios-metrics-col">
+              <div class="ios-degree-block">
+                <div class="ios-degree-bars">
+                  <span class="ios-bar" style="height:22px; background:#ff3b30; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:31px; background:#ff9500; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:41px; background:#ffcc00; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:50px; background:rgba(52,199,89,0.7); opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:60px; background:#34c759; opacity:1;"></span>
+                </div>
+                <p class="ios-value">5/5</p>
+                <p class="ios-caption">Degrees of Interaction</p>
+              </div>
+
+              <div class="ios-gauge-block">
+                <svg viewBox="0 0 200 110" class="ios-gauge">
+                  <defs>
+                    <linearGradient id="iosGaugeGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#ff3b30" />
+                      <stop offset="50%" stop-color="#ffcc00" />
+                      <stop offset="100%" stop-color="#34c759" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M10,100 A90,90 0 0 1 190,100" fill="none" stroke="url(#iosGaugeGradient3)" stroke-width="16" stroke-linecap="round" />
+                  <line x1="100" y1="100" x2="74.34" y2="34.87" stroke="#000" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="100" cy="100" r="5" fill="#000" />
+                </svg>
+                <p class="ios-gauge-value">38% confidence</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ios-result-text">Classified as Low Risk per the reference figure. Highest predicted PK effect.</p>
+        </div>
+
+        <div class="ios-card">
+          <h2 class="ios-headline">Comparative Studies</h2>
+
+          <div class="ios-list-row">
+            <div>
+              <a class="ios-list-link" href="#">Curcumin bioavailability and CYP3A4/P-glycoprotein modulation: a review</a>
+              <p class="ios-list-caption">Placeholder link — background on the shared CYP3A4 pathway curcumin and oral TKIs like sunitinib both interact through.</p>
+            </div>
+          </div>
+          <div class="ios-list-row">
+            <div>
+              <a class="ios-list-link" href="#">Herb-drug interactions with oral targeted cancer therapies: a systematic review</a>
+              <p class="ios-list-caption">Placeholder link — why oral kinase inhibitors are more susceptible to herbal PK interactions than IV chemo.</p>
+            </div>
+          </div>
+          <div class="ios-list-row">
+            <div>
+              <a class="ios-list-link" href="#">Antineoplastic Therapy and Curcumin — Figure 2 source framework</a>
+              <p class="ios-list-caption">The actual reference this app's risk classifications are transcribed from.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ios-card">
+          <h2 class="ios-headline">Effectiveness Summary</h2>
+          <p class="ios-result-text">
+            Curcumin is classified as <strong>Low Risk</strong> when paired with Sunitinib (an oral VEGFR/multi-kinase
+            inhibitor). The mock degree-of-interaction score is <strong>5 out of 5</strong> — the maximum on this
+            scale — meaning curcumin is predicted to have the most significant possible effect on this drug's
+            pharmacokinetics, despite the low overall risk classification. Confidence in this specific estimate is
+            comparatively <strong>low (38%)</strong>: the source figure classifies the risk directly, but doesn't
+            detail the underlying PK mechanism, so a high predicted interaction degree is paired here with real
+            uncertainty about how firmly established that estimate is.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#fafbff; margin-top:16px;">
+      <h2 style="margin-bottom:6px;">Design note</h2>
+      <p style="font-size: 0.82rem; color: #555; margin: 0;">
+        This screen is reached by tapping a search result on Quick Check, so it's a pushed detail view rather than
+        its own tab — hence the back button instead of the bottom tab bar. Comparative Studies links out to
+        supporting literature/context rather than comparing this pairing against other drugs numerically; the
+        first two entries are illustrative placeholders (no real URL behind them), included to show the intended
+        shape of the section, not to claim real citations exist yet.
+      </p>
+    </div>
+  </div>
+  <script src="embed.js"></script>
+</body>
+</html>

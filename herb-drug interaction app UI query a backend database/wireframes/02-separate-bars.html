@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframe 2 — Stoplight + Separate Bars</title>
+  <link rel="stylesheet" href="wireframes.css" />
+  <style>
+    .bars-col {
+      flex: 1;
+      min-width: 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding-top: 4px;
+    }
+    .fill-degree { background: linear-gradient(90deg, #ff3b30 0%, #ff9500 25%, #ffcc00 50%, #8bd646 75%, #34c759 100%); }
+    .fill-confidence { background: linear-gradient(90deg, #ff3b30 0%, #ff9500 25%, #ffcc00 50%, #8bd646 75%, #34c759 100%); }
+    .mask-degree { width: 0%; }
+    .mask-confidence { width: 62%; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="index.html">&larr; Back to all wireframes</a>
+    <span class="wireframe-label">Wireframe 2</span>
+    <h1 class="app-title">Stoplight + Two Distinct Bars</h1>
+    <p class="subtitle">Curcumin &times; Sunitinib — degree and confidence shown as two separate, equally-weighted bars instead of a gauge, formatted to match the real iOS app exactly.</p>
+
+    <div class="ios-frame">
+      <div class="ios-navbar">
+        <span class="ios-navbar-title">Curcumin-Drug Interaction Checker</span>
+      </div>
+
+      <div class="ios-content">
+        <div class="ios-disclaimer">
+          Prototype decision-support aid — not clinical advice. Every risk rating is transcribed from a
+          user-provided reference figure covering 104 antineoplastic agents' interaction with curcumin. Nothing
+          here has been independently verified — not a substitute for clinical or pharmacist judgment.
+        </div>
+
+        <div class="ios-card">
+          <h2 class="ios-headline">Quick Check</h2>
+          <input class="ios-textfield" type="text" value="Sunitinib" readonly />
+
+          <div class="ios-result-row">
+            <div class="ios-traffic-light-col">
+              <div class="ios-traffic-light">
+                <span class="ios-light ios-light-red"></span>
+                <span class="ios-light ios-light-orange"></span>
+                <span class="ios-light ios-light-green lit"></span>
+                <span class="ios-light ios-light-gray"></span>
+              </div>
+              <p class="ios-risk-label">Low risk — generally safe</p>
+            </div>
+
+            <div class="bars-col">
+              <div class="ios-metric-block">
+                <div class="ios-metric-label"><span>Degree of Interaction</span><span>5/5</span></div>
+                <div class="ios-metric-track fill-degree"><div class="ios-metric-mask mask-degree"></div></div>
+              </div>
+              <div class="ios-metric-block">
+                <div class="ios-metric-label"><span>Level of Confidence</span><span>38%</span></div>
+                <div class="ios-metric-track fill-confidence"><div class="ios-metric-mask mask-confidence"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="ios-result-text">Classified as Low Risk per the reference figure. Highest predicted PK effect.</p>
+        </div>
+      </div>
+
+      <div class="ios-tabbar">
+        <div class="ios-tab ios-tab-active">
+          <span class="ios-tab-icon">&check;</span>
+          <span>Quick Check</span>
+        </div>
+        <div class="ios-tab">
+          <span class="ios-tab-icon">&#9776;</span>
+          <span>Browse All</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#fafbff; margin-top:16px;">
+      <h2 style="margin-bottom:6px;">Design note</h2>
+      <p style="font-size: 0.82rem; color: #555; margin: 0;">
+        Keeping degree and confidence as two separate bars (rather than a bar + gauge, as in the real app) makes
+        both metrics visually equal in weight and easier to scan side by side. This pairing is a good stress-test
+        for the layout: Sunitinib has the maximum degree of interaction (5/5) alongside comparatively low
+        confidence (38%) — with separate bars that contrast is immediately visible, which is exactly the case
+        where Wireframe 1's fused single-number approach would be most likely to mislead.
+      </p>
+    </div>
+  </div>
+  <script src="embed.js"></script>
+</body>
+</html>

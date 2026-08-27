@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Herb-Drug Interaction Checker — UI Wireframes</title>
+  <link rel="stylesheet" href="wireframes.css" />
+  <style>
+    .wf-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .wf-card:hover {
+      border-color: #3b4de0;
+    }
+    .wf-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #3b4de0;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .wf-title {
+      font-size: 1rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .wf-desc {
+      font-size: 0.85rem;
+      color: #666;
+      margin: 0 0 0 36px;
+    }
+    .original-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #e3f9ea;
+      color: #1c8a44;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+    .wireframes-disclaimer {
+      background: #fff8e1;
+      border: 1px solid #f0d787;
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      line-height: 1.4;
+      margin: 4px 0 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1 class="app-title">UI Wireframes</h1>
+    <p class="subtitle">Curcumin &times; Sunitinib is used as the real example pairing throughout, both in the original app below and every mockup that follows.</p>
+
+    <a class="card wf-card" href="00-original-app.html">
+      <div class="wf-title"><span class="original-badge">&#10003;</span>Original App — As Built</div>
+      <p class="wf-desc">The initially planned app, exactly as it was already implemented — not a proposal, the actual reference point.</p>
+    </a>
+
+    <div class="wireframes-disclaimer">
+      <strong>Disclaimer:</strong> Everything below this point is mock UI exploration — proposed alternative
+      approaches that could be built out depending on what you prefer, not something that currently exists in the
+      real app.
+    </div>
+
+    <a class="card wf-card" href="01-combined-bar.html">
+      <div class="wf-title"><span class="wf-num">1</span>Combined Confidence + Interaction Bar</div>
+      <p class="wf-desc">A single fused gradient bar (red to green) combining degree of interaction and confidence into one visual.</p>
+    </a>
+
+    <a class="card wf-card" href="02-separate-bars.html">
+      <div class="wf-title"><span class="wf-num">2</span>Stoplight + Two Distinct Bars</div>
+      <p class="wf-desc">The stoplight icon alongside two separate, equally-weighted bars — degree of interaction and level of confidence.</p>
+    </a>
+
+    <a class="card wf-card" href="03-pairing-detail.html">
+      <div class="wf-title"><span class="wf-num">3</span>Pairing Detail Page</div>
+      <p class="wf-desc">Stoplight, degree bars, and gauge together at top; a comparative studies section below that; an effectiveness summary in its own section at the bottom.</p>
+    </a>
+
+    <a class="card wf-card" href="04-history-table.html">
+      <div class="wf-title"><span class="wf-num">4</span>Past Pairings History Table</div>
+      <p class="wf-desc">The current check's stoplight, gauge, and degree bars, plus a native list of previously checked herb-drug pairs below it.</p>
+    </a>
+
+    <a class="card wf-card" href="05-yellow-green-recolor.html">
+      <div class="wf-title"><span class="wf-num">5</span>Original UI, Yellow-to-Green Recolor</div>
+      <p class="wf-desc">Today's real layout, restyled so red is removed entirely from the palette.</p>
+    </a>
+
+    <a class="card wf-card" href="iphone-mockups.html">
+      <div class="wf-title"><span class="wf-num">&#128241;</span>iPhone Mockups</div>
+      <p class="wf-desc">All 5 renditions above, shown side by side as mobile screens inside iPhone frames.</p>
+    </a>
+  </div>
+</body>
+</html>

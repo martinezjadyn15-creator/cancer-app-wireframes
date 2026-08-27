@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Original App — As Built</title>
+  <link rel="stylesheet" href="wireframes.css" />
+  <style>
+    .original-badge {
+      display: inline-block;
+      background: #e3f9ea;
+      color: #1c8a44;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back-link" href="index.html">&larr; Back to all wireframes</a>
+    <span class="original-badge">Already built — not a wireframe</span>
+    <h1 class="app-title">Original App — As Built</h1>
+    <p class="subtitle">
+      This is a direct replica of the real SwiftUI iOS app (<em>Curcumin-Drug Interaction Checker</em>) — not a
+      proposed design — using the same Curcumin &times; Sunitinib example as every wireframe below. Note: the
+      wireframes below propose alternative designs for the separate <strong>web</strong> app, not for this iOS app.
+    </p>
+
+    <div class="ios-frame">
+      <div class="ios-navbar">
+        <span class="ios-navbar-title">Curcumin-Drug Interaction Checker</span>
+      </div>
+
+      <div class="ios-content">
+        <div class="ios-disclaimer">
+          Prototype decision-support aid — not clinical advice. Every risk rating is transcribed from a
+          user-provided reference figure covering 104 antineoplastic agents' interaction with curcumin. Nothing
+          here has been independently verified — not a substitute for clinical or pharmacist judgment.
+        </div>
+
+        <div class="ios-card">
+          <h2 class="ios-headline">Quick Check</h2>
+          <input class="ios-textfield" type="text" value="Sunitinib" readonly />
+
+          <div class="ios-result-row">
+            <div class="ios-traffic-light-col">
+              <div class="ios-traffic-light">
+                <span class="ios-light ios-light-red"></span>
+                <span class="ios-light ios-light-orange"></span>
+                <span class="ios-light ios-light-green lit"></span>
+                <span class="ios-light ios-light-gray"></span>
+              </div>
+              <p class="ios-risk-label">Low risk — generally safe</p>
+            </div>
+
+            <div class="ios-metrics-col">
+              <div class="ios-degree-block">
+                <div class="ios-degree-bars">
+                  <span class="ios-bar" style="height:22px; background:#ff3b30; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:31px; background:#ff9500; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:41px; background:#ffcc00; opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:50px; background:rgba(52,199,89,0.7); opacity:0.35;"></span>
+                  <span class="ios-bar" style="height:60px; background:#34c759; opacity:1;"></span>
+                </div>
+                <p class="ios-value">5/5</p>
+                <p class="ios-caption">Degrees of Interaction</p>
+              </div>
+
+              <div class="ios-gauge-block">
+                <svg viewBox="0 0 200 110" class="ios-gauge">
+                  <defs>
+                    <linearGradient id="iosGaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#ff3b30" />
+                      <stop offset="50%" stop-color="#ffcc00" />
+                      <stop offset="100%" stop-color="#34c759" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M10,100 A90,90 0 0 1 190,100" fill="none" stroke="url(#iosGaugeGradient)" stroke-width="16" stroke-linecap="round" />
+                  <line x1="100" y1="100" x2="74.34" y2="34.87" stroke="#000" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="100" cy="100" r="5" fill="#000" />
+                </svg>
+                <p class="ios-gauge-value">38% confidence</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ios-result-text">Classified as Low Risk per the reference figure. Highest predicted PK effect.</p>
+        </div>
+      </div>
+
+      <div class="ios-tabbar">
+        <div class="ios-tab ios-tab-active">
+          <span class="ios-tab-icon">&check;</span>
+          <span>Quick Check</span>
+        </div>
+        <div class="ios-tab">
+          <span class="ios-tab-icon">&#9776;</span>
+          <span>Browse All</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="background:#fafbff; margin-top:16px;">
+      <h2 style="margin-bottom:6px;">What this page is</h2>
+      <p style="font-size: 0.82rem; color: #555; margin: 0;">
+        This replicates the real, already-built SwiftUI iOS app exactly: a two-tab layout (Quick Check / Browse
+        All), a native nav bar, an always-visible disclaimer, a search field with live suggestions, and the app's
+        actual widgets — including details a casual glance would miss, like the traffic light using red/orange/
+        green/gray (not yellow) and the degree-of-interaction chart only lighting up the single bar matching the
+        current value rather than filling cumulatively. It's included here as the fixed reference point that every
+        wireframe below is a proposed alternative <em>to</em>, not a replacement <em>of</em>.
+      </p>
+    </div>
+  </div>
+  <script src="embed.js"></script>
+</body>
+</html>
